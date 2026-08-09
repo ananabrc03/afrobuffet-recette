@@ -1,0 +1,259 @@
+[
+  {
+    "name": "Ablo",
+    "slug": "ablo",
+    "pays": "Togo, Bénin",
+    "origine": "Des petites galettes de maïs et de riz cuites à la vapeur, moelleuses et à peine sucrées. Au Togo et au Bénin, on les mange souvent avec du poisson braisé bien pimenté. Simple, réconfortant, ça se picore facilement.",
+    "portions_main": "6 personnes",
+    "portions_note": "env. 15 à 20 galettes",
+    "prep_txt": "30 min",
+    "prep_min": 30,
+    "cuisson_txt": "12 à 15 min",
+    "cuisson_min": 15,
+    "passive": [
+      "Fermentation",
+      "1 à 6 h",
+      "fermentation"
+    ],
+    "difficulte": "Moyen",
+    "ustensiles": "Casserole, cuillère en bois, fouet, saladier, torchon, couscoussier (ou marmite + panier vapeur), petits moules ronds (silicone de préférence), couteau",
+    "ingredients": [
+      "200 g de farine de riz",
+      "60 g de farine de maïs",
+      "100 g de maïzena",
+      "100 g de sucre",
+      "1 sachet de levure de boulanger (7 g)",
+      "1 c. à café de sel",
+      "60 cl d'eau",
+      "un peu de beurre pour les moules"
+    ],
+    "steps": [
+      "Dans une casserole, délayer la farine de maïs dans 25 cl d'eau froide. Porter à feu moyen en remuant sans arrêt à la cuillère en bois. Dès que le mélange épaissit et commence à bouillonner (2 à 3 min), retirer du feu.",
+      "Laisser refroidir complètement cette bouillie à température ambiante. Étape importante : si la pâte est encore chaude, elle tuera la levure.",
+      "Quand la bouillie est froide, ajouter progressivement la farine de riz et la maïzena en fouettant, avec le reste de l'eau (35 cl), jusqu'à obtenir une pâte lisse et homogène, sans grumeaux, un peu plus épaisse qu'une pâte à crêpes.",
+      "Diluer la levure dans 2 c. à soupe d'eau tiède, l'incorporer à la pâte. Ajouter le sucre et le sel, bien mélanger.",
+      "Couvrir le saladier d'un torchon humide (rincé à l'eau tiède et essoré) puis d'un couvercle. Laisser fermenter dans un endroit chaud (four éteint, lampe allumée) : 1 à 2 h s'il fait chaud, jusqu'à 6 h en hiver. La pâte est prête quand de petites bulles apparaissent en surface et qu'elle a légèrement gonflé.",
+      "Remplir le bas d'un couscoussier (ou d'une marmite avec panier vapeur) d'eau et porter à ébullition. Beurrer légèrement des petits moules ronds, de préférence en silicone pour un démoulage facile.",
+      "Remplir les moules de pâte aux ½ à ¾ seulement, car elle gonfle à la cuisson. Les déposer dans le panier vapeur.",
+      "Couvrir et cuire à la vapeur 12 à 15 min : les galettes sont prêtes quand elles sont fermes et que la pointe d'un couteau en ressort sèche.",
+      "Démouler délicatement et servir tiède, avec une sauce tomate pimentée et du poisson frit ou braisé."
+    ],
+    "anecdote": "L'ablo, c'est le genre de truc qu'on achète par pile au marché, encore tiède, emballé dans des feuilles. On en prend une bouchée avec un morceau de poisson trempé dans la sauce, et c'est parti.",
+    "sources": [
+      "https://www.okedjenou.com/recette/recette-facile-de-l-ablo-en-6-etapes/",
+      "https://www.nkosiagro.com/en/blogs/blog-and-recipes/recette-des-abolo-ablo",
+      "https://togo-tourisme.fr/plat-togo/ablo-recette-facile-plat-africain/"
+    ],
+    "total": "45 min"
+  },
+  {
+    "name": "Alloco",
+    "slug": "alloco",
+    "pays": "Côte d'Ivoire",
+    "origine": "De la banane plantain bien mûre coupée en rondelles et frite jusqu'à ce que ça caramélise. En Côte d'Ivoire, c'est le petit plaisir de tous les jours, à grignoter seul ou à côté d'un poisson.",
+    "portions_main": "4 personnes",
+    "portions_note": "",
+    "prep_txt": "10 min",
+    "prep_min": 10,
+    "cuisson_txt": "15 min",
+    "cuisson_min": 15,
+    "passive": null,
+    "difficulte": "Facile",
+    "ustensiles": "Couteau, planche à découper, saladier, poêle profonde (ou friteuse), écumoire, papier absorbant",
+    "ingredients": [
+      "4 bananes plantains bien mûres (peau jaune fortement tachetée de noir)",
+      "50 cl d'huile d'arachide (pour la friture)",
+      "1 c. à café de sel",
+      "1 oignon (pour servir, facultatif)",
+      "1 piment frais (facultatif)"
+    ],
+    "steps": [
+      "Choisir des plantains bien mûrs : la peau doit être jaune couverte de taches noires. C'est ce qui garantit le fondant et le caramélisé. Couper les deux extrémités, inciser la peau sur toute la longueur avec la pointe d'un couteau, puis la retirer.",
+      "Couper les plantains en rondelles de 1 à 1,5 cm d'épaisseur (ou en biseau pour de plus grands morceaux). Les mettre dans un saladier, saler légèrement et mélanger à la main.",
+      "Verser l'huile dans une poêle profonde ou une friteuse sur 3 à 4 cm de hauteur. Chauffer à 170 °C : un morceau de plantain plongé doit grésiller aussitôt et remonter à la surface.",
+      "Plonger les rondelles par petites quantités sans surcharger la poêle, sinon l'huile refroidit et l'alloco devient gras. Frire 3 à 4 min de chaque côté, en retournant à mi-cuisson, jusqu'à ce qu'elles soient dorées et caramélisées sur les bords.",
+      "Retirer à l'écumoire et égoutter sur du papier absorbant.",
+      "Servir chaud, seul ou accompagné d'oignon émincé et de piment frais, en accompagnement de poisson braisé, poulet, œufs ou haricots."
+    ],
+    "anecdote": "L'alloco, ça se mange à toute heure, souvent acheté au coin de la rue chez la « tantie » qui a son coin friture. Le secret tient à une chose : des plantains bien mûrs, presque noirs, sinon ça ne caramélise pas.",
+    "sources": [
+      "https://lesbonnesrecettes.fr/recette/alloco-ivoirien-croustillant-bananes-plantains-frites-a-la-perfection-4536",
+      "https://saveursdeoumy.com/alloco-bananes-plantains-frites/",
+      "https://www.nkosiagro.com/en/blogs/blog-and-recipes/recette-alloco-ivoirien"
+    ],
+    "total": "25 min"
+  },
+  {
+    "name": "Chapati",
+    "slug": "chapati",
+    "pays": "Afrique de l'Est",
+    "origine": "Un pain plat tout en couches, tendre et un peu feuilleté. On le retrouve partout au Kenya, en Tanzanie et en Ouganda, pour saucer un ragoût ou accompagner à peu près n'importe quoi.",
+    "portions_main": "6 à 8 chapatis",
+    "portions_note": "",
+    "prep_txt": "20 min",
+    "prep_min": 20,
+    "cuisson_txt": "20 min",
+    "cuisson_min": 20,
+    "passive": [
+      "Repos",
+      "10 à 30 min",
+      "repos"
+    ],
+    "difficulte": "Moyen",
+    "ustensiles": "Grand saladier, plan de travail fariné, rouleau à pâtisserie, poêle, pinceau de cuisine, torchon",
+    "ingredients": [
+      "375 g de farine de blé tout usage (3 tasses)",
+      "1 c. à café de sel",
+      "1 c. à soupe de sucre (facultatif, pour la couleur)",
+      "25 cl d'eau tiède (1 tasse)",
+      "4 c. à soupe d'huile ou de ghee, + un peu pour la cuisson"
+    ],
+    "steps": [
+      "Dans un grand saladier, mélanger la farine, le sel et le sucre.",
+      "Ajouter l'eau tiède progressivement en mélangeant jusqu'à former une pâte. La transférer sur un plan fariné et pétrir 10 min : elle doit devenir souple, lisse et revenir en place quand on la presse du doigt.",
+      "Ajouter 1 c. à soupe d'huile et pétrir encore jusqu'à ce qu'elle soit bien absorbée. Couvrir d'un torchon et laisser reposer 10 à 30 min.",
+      "Diviser la pâte en 6 à 8 boules. Sur un plan légèrement fariné, étaler chaque boule en un cercle fin au rouleau.",
+      "Badigeonner la surface d'huile, puis rouler le cercle sur lui-même en boudin serré. Enrouler ce boudin en escargot (spirale) et l'écraser légèrement. C'est cette étape qui crée les couches feuilletées.",
+      "Réétaler chaque spirale au rouleau en un cercle d'environ 20 cm.",
+      "Chauffer une poêle à feu moyen. Y déposer un chapati et cuire 2 à 3 min : quand des cloques apparaissent, le badigeonner d'huile, le retourner, huiler l'autre face et cuire jusqu'à ce qu'il soit doré et tacheté des deux côtés.",
+      "Empiler les chapatis dans un torchon replié pour qu'ils restent chauds et moelleux. Servir avec un ragoût, une sauce ou des grillades."
+    ],
+    "anecdote": "Le chapati est arrivé avec les familles indiennes venues travailler sur le chemin de fer, et il s'est installé pour de bon. Aujourd'hui, quand il y a des chapatis à table, c'est souvent qu'on reçoit du monde.",
+    "sources": [
+      "https://recettesdecuisineafricaine.com/chapati-dafrique-de-lest/",
+      "https://www.citrusetoile.fr/comment-preparer-le-chapati-tanzanien/",
+      "https://patseasyrecipes.wordpress.com/2015/12/17/recette-n11-vrais-chapatis-kenyans-recipe-n11-real-kenyan-chapatis/"
+    ],
+    "total": "40 min"
+  },
+  {
+    "name": "Chikwangue (Kwanga)",
+    "slug": "chikwangue-kwanga",
+    "pays": "RDC, Rép. du Congo",
+    "origine": "Une pâte de manioc fermenté, roulée dans des feuilles et cuite à la vapeur, dense et un peu élastique. C'est un accompagnement de base dans les deux Congo, qui tient bien au corps.",
+    "portions_main": "4 à 6 personnes",
+    "portions_note": "",
+    "prep_txt": "20 min",
+    "prep_min": 20,
+    "cuisson_txt": "1 h à 1 h 30",
+    "cuisson_min": 90,
+    "passive": [
+      "Trempage",
+      "3 à 4 jours",
+      "trempage"
+    ],
+    "difficulte": "Difficile",
+    "ustensiles": "Grand récipient (trempage), mortier et pilon (ou mixeur), couteau, feuilles de bananier, ficelle de cuisine, grande marmite (ou panier vapeur)",
+    "ingredients": [
+      "1 kg de pâte de manioc fermentée prête à l'emploi (rayon africain)",
+      "OU 2 kg de manioc frais à faire fermenter soi-même",
+      "Feuilles de bananier (ou feuilles de maranta)",
+      "Ficelle de cuisine alimentaire",
+      "Eau"
+    ],
+    "steps": [
+      "Si vous partez du manioc frais :",
+      "Éplucher le manioc, le laver, le couper en gros tronçons et le faire tremper dans un grand volume d'eau pendant 3 à 4 jours à température ambiante. L'eau devient trouble et le manioc ramollit : c'est la fermentation.",
+      "Rincer abondamment à l'eau claire, égoutter, puis retirer les fibres dures du centre des morceaux.",
+      "Piler le manioc au mortier (ou mixer par petites quantités) jusqu'à obtenir une pâte lisse et homogène, sans morceaux.",
+      "Préparation et cuisson (commune aux deux méthodes) :",
+      "Passer rapidement les feuilles de bananier au-dessus d'une flamme (ou les ébouillanter) pour les assouplir et éviter qu'elles ne se déchirent. Les essuyer et les couper en rectangles d'environ 20 cm.",
+      "Déposer 3 à 4 grosses cuillères de pâte au centre d'une feuille. Replier la feuille pour former un boudin bien compact, puis l'envelopper d'une seconde feuille dans l'autre sens. Ficeler solidement à plusieurs endroits.",
+      "Ranger les boudins dans une grande marmite. Les couvrir d'eau (ou les cuire à la vapeur) et laisser cuire à petits bouillons 1 h à 1 h 30.",
+      "Laisser tiédir, puis retirer les feuilles. La chikwangue doit être ferme, dense et légèrement élastique. Servir en tranches avec du poisson, de la viande en sauce ou du saka-saka."
+    ],
+    "anecdote": "La chikwangue se garde plusieurs jours, alors elle suivait les pêcheurs et les gens qui bougeaient le long du fleuve. D'un endroit à l'autre elle change de nom : kwanga, bobolo, mintumba, miondo... mais c'est la même idée.",
+    "sources": [
+      "https://recettes-africaines.fr/recette/recette-chikwangue/",
+      "https://www.nkosiagro.com/en/blogs/blog-and-recipes/chikwangue-a-traditional-dish-that-is-a-hit-in-central-africa",
+      "https://blog.restaurant-reunionnais.ch/kwanga-recette/"
+    ],
+    "total": "1 h 50"
+  },
+  {
+    "name": "Fufu (Foufou)",
+    "slug": "fufu-foufou",
+    "pays": "Afrique de l'Ouest, Afrique Centrale",
+    "origine": "Une pâte lisse et élastique, faite à partir de manioc, d'igname ou de plantain, qu'on roule en boule pour tremper dans la sauce. C'est l'accompagnement du quotidien dans plein de pays d'Afrique de l'Ouest et centrale.",
+    "portions_main": "4 personnes",
+    "portions_note": "",
+    "prep_txt": "10 min",
+    "prep_min": 10,
+    "cuisson_txt": "10 à 40 min",
+    "cuisson_min": 40,
+    "passive": null,
+    "difficulte": "Moyen",
+    "ustensiles": "Casserole, fouet, spatule (ou cuillère) en bois ; version fraîche : grande casserole, mortier et pilon (ou mixeur), couteau",
+    "ingredients": [
+      "Version farine (la plus simple) :",
+      "250 g de farine de fufu (manioc, plantain ou mélange)",
+      "60 à 75 cl d'eau",
+      "Version fraîche :",
+      "1 kg de manioc, d'igname ou de banane plantain verte",
+      "1 pincée de sel"
+    ],
+    "steps": [
+      "Version farine :",
+      "Verser la moitié de l'eau (froide) dans une casserole, ajouter la farine en pluie et fouetter énergiquement pour la dissoudre sans grumeaux.",
+      "Placer sur feu moyen et remuer sans arrêt à la spatule en bois : la pâte va épaissir progressivement.",
+      "Quand elle devient très épaisse et se décolle des parois, baisser le feu, ajouter un peu d'eau chaude si nécessaire et travailler vigoureusement 4 à 6 min. Replier la pâte sur elle-même en la « battant » jusqu'à ce qu'elle soit lisse, souple et élastique.",
+      "Mouiller légèrement les mains (ou une feuille de plastique) et façonner des boules régulières.",
+      "Version fraîche :",
+      "Éplucher le tubercule, le couper en morceaux et le cuire 30 à 40 min dans une grande casserole d'eau bouillante salée, jusqu'à ce qu'il soit très tendre (la lame d'un couteau s'y enfonce sans résistance).",
+      "Égoutter puis piler énergiquement au mortier (ou mixer par à-coups) jusqu'à une pâte homogène, lisse et collante. Façonner en boules.",
+      "Servir chaud avec une sauce riche (arachide, gombo, sauce graine, ndolé). Se mange avec les doigts : prélever un morceau, le tremper dans la sauce, avaler sans trop mâcher."
+    ],
+    "anecdote": "Le fufu, ça se mange avec les doigts : on prend un morceau, on fait un petit creux avec le pouce, on trempe dans la sauce et on avale sans trop mâcher. Et le bruit du pilon quand quelqu'un le prépare, tout le monde le reconnaît.",
+    "sources": [
+      "https://www.nkosiagro.com/blogs/culture-africaine/preparation-du-foufou-de-manioc",
+      "https://www.leroutarddespapilles.fr/foufou-traditionnel-plat-africain/",
+      "https://www.recettesafricaine.com/foutou.html"
+    ],
+    "total": "50 min"
+  },
+  {
+    "name": "Riz Jollof",
+    "slug": "riz-jollof",
+    "pays": "Afrique de l'Ouest",
+    "origine": "Du riz mijoté dans une sauce tomate-poivron bien relevée, qui prend une belle couleur rouge-orangé. C'est LE plat qu'on sort quand il y a du monde, du Sénégal au Nigeria.",
+    "portions_main": "6 personnes",
+    "portions_note": "",
+    "prep_txt": "20 min",
+    "prep_min": 20,
+    "cuisson_txt": "45 min",
+    "cuisson_min": 45,
+    "passive": null,
+    "difficulte": "Moyen",
+    "ustensiles": "Blender (ou mixeur), grande casserole à fond épais avec couvercle, cuillère en bois, feuille d'aluminium, fourchette, passoire",
+    "ingredients": [
+      "500 g de riz long grain (parfumé ou étuvé/parboiled)",
+      "4 tomates mûres",
+      "2 poivrons rouges",
+      "2 oignons (1 pour la purée, 1 émincé)",
+      "3 c. à soupe de concentré de tomate",
+      "1 à 2 piments (scotch bonnet/antillais, selon le goût)",
+      "3 gousses d'ail, 1 morceau de gingembre (2 cm)",
+      "2 cubes de bouillon",
+      "1 c. à café de thym, 1 c. à café de curry, 1 c. à café de paprika, 2 feuilles de laurier",
+      "10 cl d'huile végétale",
+      "sel, eau"
+    ],
+    "steps": [
+      "Mixer finement les tomates, les poivrons, 1 oignon, l'ail, le gingembre et le(s) piment(s) jusqu'à obtenir une purée lisse.",
+      "Rincer le riz à l'eau claire jusqu'à ce que l'eau soit presque transparente, puis l'égoutter. Cela retire l'amidon de surface et évite qu'il colle.",
+      "Dans une grande casserole à fond épais, chauffer l'huile et faire revenir le second oignon émincé 5 min sans coloration.",
+      "Ajouter le concentré de tomate et le cuire 2 à 3 min en remuant, pour enlever l'acidité.",
+      "Verser la purée mixée. Laisser mijoter à feu moyen 15 à 20 min en remuant de temps en temps, jusqu'à ce que la sauce épaississe, fonce et que l'huile remonte en surface. C'est l'étape clé du goût.",
+      "Ajouter le thym, le curry, le paprika, le laurier, les cubes de bouillon émiettés et un peu de sel. Mélanger.",
+      "Ajouter le riz égoutté et remuer pour bien l'enrober de sauce. Verser de l'eau chaude juste à hauteur du riz (environ 1 cm au-dessus).",
+      "Couvrir hermétiquement (une feuille d'alu sous le couvercle aide à retenir la vapeur) et cuire à feu doux 25 à 30 min sans remuer, jusqu'à absorption complète du liquide et riz tendre. Pour le goût fumé recherché, laisser légèrement attacher au fond en fin de cuisson.",
+      "Couper le feu, laisser reposer 5 min à couvert, aérer les grains à la fourchette et servir avec du poulet, du poisson ou des plantains frits (alloco)."
+    ],
+    "anecdote": "Entre le Nigeria et le Ghana, c'est la guerre (gentille) pour savoir qui fait le meilleur jollof, chacun est sûr d'avoir raison. Et tout le monde se bat pour le fond de la marmite, le riz un peu caramélisé collé en dessous : le meilleur morceau.",
+    "sources": [
+      "https://www.afrique-voyage.net/jollof-rice-recette-authentique-et-origines-en-afrique-de-louest/",
+      "https://www.referentiel-restauration-collective.fr/recette/jollof-rice-afrique-de-louest-2/"
+    ],
+    "total": "1 h 05"
+  }
+]
