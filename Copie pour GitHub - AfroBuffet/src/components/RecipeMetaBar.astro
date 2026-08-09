@@ -1,0 +1,31 @@
+---
+import type { Recipe } from '../lib/data';
+import Icon from './Icon.astro';
+
+interface Props { recipe: Recipe }
+const { recipe } = Astro.props;
+const canonicalUrl = `https://afrobuffet.fr/recettes/${recipe.slug}/`;
+---
+
+<div class="recipe-meta">
+  <div class="recipe-meta__facts">
+    <span><strong>Origine :</strong> {recipe.countryRegion}</span>
+    <span><Icon name="difficulty" /><strong>Difficulté :</strong> {recipe.difficulty}</span>
+  </div>
+  <div class="recipe-meta__actions" data-print-hidden>
+    <button
+      class="icon-button"
+      type="button"
+      data-share-button
+      data-share-title={`${recipe.name} — AfroBuffet`}
+      data-share-text={`Découvrez la recette ${recipe.name} sur AfroBuffet.`}
+      data-share-url={canonicalUrl}
+    >
+      <Icon name="share" /><span>Partager</span>
+    </button>
+    <button class="icon-button" type="button" data-print-button>
+      <Icon name="print" /><span>Imprimer</span>
+    </button>
+  </div>
+  <p class="share-status" data-share-status aria-live="polite"></p>
+</div>

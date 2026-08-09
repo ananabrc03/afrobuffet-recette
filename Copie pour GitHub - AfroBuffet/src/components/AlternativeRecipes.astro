@@ -1,0 +1,21 @@
+---
+import type { Recipe } from '../lib/data';
+import Icon from './Icon.astro';
+interface Props { alternatives: Recipe['alternativeRecipes'] }
+const { alternatives } = Astro.props;
+---
+
+{alternatives.length > 0 && (
+  <section class="recipe-section alternatives" aria-labelledby="alternatives-title">
+    <h2 id="alternatives-title">Recettes alternatives</h2>
+    <ul>
+      {alternatives.map((alternative) => (
+        <li>
+          <a href={alternative.url} target="_blank" rel="noopener noreferrer">
+            <span>{alternative.label}</span><Icon name="external-link" />
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

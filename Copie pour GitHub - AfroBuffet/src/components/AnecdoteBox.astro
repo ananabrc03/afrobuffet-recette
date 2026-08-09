@@ -1,0 +1,9 @@
+---
+interface Props { anecdote: string }
+const { anecdote } = Astro.props;
+---
+
+<aside class="anecdote" aria-labelledby="anecdote-title">
+  <h2 id="anecdote-title"><span aria-hidden="true">✦</span> Anecdote</h2>
+  <p>{anecdote}</p>
+</aside>

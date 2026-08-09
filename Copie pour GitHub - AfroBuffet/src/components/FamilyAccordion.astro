@@ -1,0 +1,39 @@
+---
+import type { Family, Recipe } from '../lib/data';
+import Icon from './Icon.astro';
+import RecipeRail from './RecipeRail.astro';
+
+interface Props {
+  family: Family;
+  recipes: Recipe[];
+  enabled: boolean;
+}
+
+const { family, recipes, enabled } = Astro.props;
+const useDarkText = ['boissons', 'plats-mijotes', 'desserts', 'accompagnements'].includes(family.id);
+const familyStyle = `--family-color:${family.primaryColor};--family-accent:${family.accentColor};--family-on-color:${useDarkText ? '#2B1710' : '#FFFFFF'};`;
+---
+
+{enabled ? (
+  <details class="family-accordion" style={familyStyle} open={family.initiallyOpen}>
+    <summary>
+      <span class="family-accordion__state" aria-hidden="true">
+        <Icon name="plus" class="family-accordion__plus" />
+        <Icon name="minus" class="family-accordion__minus" />
+      </span>
+      <span class="family-accordion__name">{family.name}</span>
+      <span class="family-accordion__count">6 recettes</span>
+    </summary>
+    <div class="family-accordion__content">
+      <RecipeRail recipes={recipes} id={`rail-${family.id}`} />
+    </div>
+  </details>
+) : (
+  <div class="family-accordion family-accordion--disabled" style={familyStyle} aria-disabled="true">
+    <div class="family-accordion__disabled-summary">
+      <span class="family-accordion__state" aria-hidden="true"><Icon name="plus" /></span>
+      <span class="family-accordion__name">{family.name}</span>
+      <span class="family-accordion__coming">À venir</span>
+    </div>
+  </div>
+)}

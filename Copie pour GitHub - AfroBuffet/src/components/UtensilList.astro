@@ -1,0 +1,9 @@
+---
+interface Props { utensils: string[] }
+const { utensils } = Astro.props;
+---
+
+<section class="recipe-section ruled-section" aria-labelledby="utensils-title">
+  <h2 id="utensils-title">Ustensiles</h2>
+  <ul class="utensil-list">{utensils.map((utensil) => <li>{utensil}</li>)}</ul>
+</section>

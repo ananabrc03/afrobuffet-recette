@@ -1,0 +1,20 @@
+---
+import { data } from '../lib/data';
+---
+
+<header class="site-header" data-print-hidden>
+  <div class="site-header__inner">
+    <a class="brand" href="/" aria-label="AfroBuffet — Accueil">
+      <img
+        src="/assets/logo/logo-afrobuffet-principal.png"
+        alt="AfroBuffet"
+        width="1042"
+        height="625"
+      />
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href={data.site.shopUrl} target="_blank" rel="noopener noreferrer">Le produit</a>
+      <a href="/#recettes">Toutes les recettes</a>
+    </nav>
+  </div>
+</header>

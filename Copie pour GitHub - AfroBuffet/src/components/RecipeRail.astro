@@ -1,0 +1,36 @@
+---
+import type { Recipe } from '../lib/data';
+import RecipeCard from './RecipeCard.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  recipes: Recipe[];
+  id: string;
+  compact?: boolean;
+}
+
+const { recipes, id, compact = false } = Astro.props;
+---
+
+<div class:list={['recipe-rail-shell', { 'recipe-rail-shell--compact': compact }]} data-recipe-rail>
+  <div class="recipe-rail__hint" aria-hidden="true">
+    <Icon name="swipe" />
+    <span>Glissez pour découvrir</span>
+  </div>
+  <div class="recipe-rail" id={id} tabindex="0" aria-label="Liste horizontale de recettes">
+    {recipes.map((recipe, index) => (
+      <RecipeCard recipe={recipe} compact={compact} eager={!compact && index === 0} />
+    ))}
+  </div>
+  <div class="recipe-rail__controls" data-print-hidden>
+    <button type="button" data-rail-previous aria-controls={id} aria-label="Recette précédente">
+      <span aria-hidden="true">←</span>
+    </button>
+    <output class="recipe-rail__progress" aria-live="polite">
+      <span data-rail-current>1</span> / <span>{recipes.length}</span>
+    </output>
+    <button type="button" data-rail-next aria-controls={id} aria-label="Recette suivante">
+      <span aria-hidden="true">→</span>
+    </button>
+  </div>
+</div>

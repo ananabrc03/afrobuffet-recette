@@ -1,0 +1,18 @@
+---
+import type { Recipe } from '../lib/data';
+interface Props { steps: Recipe['steps'] }
+const { steps } = Astro.props;
+---
+
+<section class="recipe-section ruled-section preparation" aria-labelledby="preparation-title">
+  <h2 id="preparation-title">Préparation</h2>
+  <ol class="preparation__list">
+    {steps.map((step) => (
+      <li>
+        {step.section && <p class="preparation__section">{step.section}</p>}
+        <h3>Étape {step.number}</h3>
+        <p>{step.text}</p>
+      </li>
+    ))}
+  </ol>
+</section>

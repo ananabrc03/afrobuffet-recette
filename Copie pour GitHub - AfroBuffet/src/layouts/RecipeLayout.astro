@@ -1,0 +1,64 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import RecipeHero from '../components/RecipeHero.astro';
+import RecipeMetaBar from '../components/RecipeMetaBar.astro';
+import IngredientList from '../components/IngredientList.astro';
+import UtensilList from '../components/UtensilList.astro';
+import PreparationSteps from '../components/PreparationSteps.astro';
+import AnecdoteBox from '../components/AnecdoteBox.astro';
+import AlternativeRecipes from '../components/AlternativeRecipes.astro';
+import RelatedRecipes from '../components/RelatedRecipes.astro';
+import type { Family, Recipe } from '../lib/data';
+
+interface Props { recipe: Recipe; family: Family; related: Recipe[] }
+const { recipe, family, related } = Astro.props;
+const imagePath = `/images/recipes/${recipe.familyId}/${recipe.slug}.png`;
+const pageUrl = `https://afrobuffet.fr${recipe.seo.canonicalPath}`;
+const imageUrl = `https://afrobuffet.fr${imagePath}`;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Recipe',
+  name: recipe.name,
+  description: recipe.seo.description,
+  image: [imageUrl],
+  prepTime: recipe.times.activePreparation.schemaDuration,
+  cookTime: recipe.times.cooking.schemaDuration,
+  totalTime: recipe.times.cardTotalActive.schemaDuration,
+  recipeYield: recipe.servings,
+  recipeCategory: recipe.familyName,
+  recipeCuisine: recipe.countryRegion,
+  recipeIngredient: recipe.ingredients,
+  recipeInstructions: recipe.steps.map((step) => ({
+    '@type': 'HowToStep',
+    position: step.number,
+    name: `Étape ${step.number}`,
+    text: step.text,
+  })),
+  inLanguage: 'fr',
+  mainEntityOfPage: pageUrl,
+};
+const familyStyle = `--family-color:${family.primaryColor};--family-accent:${family.accentColor};`;
+---
+
+<BaseLayout
+  title={recipe.seo.title}
+  description={recipe.seo.description}
+  canonicalPath={recipe.seo.canonicalPath}
+  image={imagePath}
+  type="article"
+  structuredData={structuredData}
+>
+  <article class="recipe-page" style={familyStyle}>
+    <RecipeHero recipe={recipe} family={family} />
+    <div class="recipe-content">
+      <p class="recipe-origin">{recipe.origin}</p>
+      <RecipeMetaBar recipe={recipe} />
+      <IngredientList ingredients={recipe.ingredients} />
+      <UtensilList utensils={recipe.utensils} />
+      <PreparationSteps steps={recipe.steps} />
+      <AnecdoteBox anecdote={recipe.anecdote} />
+      <AlternativeRecipes alternatives={recipe.alternativeRecipes} />
+      <RelatedRecipes recipes={related} currentSlug={recipe.slug} />
+    </div>
+  </article>
+</BaseLayout>

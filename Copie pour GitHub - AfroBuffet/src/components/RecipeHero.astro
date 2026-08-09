@@ -1,0 +1,34 @@
+---
+import { Picture } from 'astro:assets';
+import type { Family, Recipe } from '../lib/data';
+import { getRecipeImage } from '../lib/data';
+import TimeBadges from './TimeBadges.astro';
+
+interface Props { recipe: Recipe; family: Family }
+const { recipe, family } = Astro.props;
+const image = getRecipeImage(recipe);
+const pattern = family.pattern.split('/').at(-1);
+const heroStyle = `--family-color:${family.primaryColor};--family-accent:${family.accentColor};--family-pattern:url('/assets/patterns/${pattern}');`;
+---
+
+<section class="recipe-hero" style={heroStyle}>
+  <div class="recipe-hero__pattern" aria-hidden="true"></div>
+  <div class="recipe-hero__content">
+    <div class="recipe-hero__image">
+      <Picture
+        src={image}
+        formats={['avif']}
+        fallbackFormat="webp"
+        alt={recipe.image.alt}
+        widths={[320, 480, 640]}
+        sizes="(max-width: 599px) 74vw, 360px"
+        loading="eager"
+        fetchpriority="high"
+        width={image.width}
+        height={image.height}
+      />
+    </div>
+    <h1>{recipe.name}</h1>
+  </div>
+  <div class="recipe-hero__times"><TimeBadges badges={recipe.times.badges} /></div>
+</section>
