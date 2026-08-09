@@ -1,0 +1,362 @@
+/* =====================================================================
+   AFRO BUFFET — Fiche recette (test Ablo)
+   Structure : HTML sémantique | CSS mise en forme | JS interactions
+   ===================================================================== */
+
+/* ---------- POLICES (locales woff2) ---------- */
+@font-face{
+  font-family:"Cherry Bomb One";
+  src:url("../fonts/CherryBombOne-Regular.woff2") format("woff2");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Fredoka";
+  src:url("../fonts/Fredoka-Medium.woff2") format("woff2");
+  font-weight:500; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Fredoka";
+  src:url("../fonts/Fredoka-SemiBold.woff2") format("woff2");
+  font-weight:600; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Fredoka";
+  src:url("../fonts/Fredoka-Bold.woff2") format("woff2");
+  font-weight:700; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Poppins";
+  src:url("../fonts/Poppins-Regular.woff2") format("woff2");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Poppins";
+  src:url("../fonts/Poppins-Italic.woff2") format("woff2");
+  font-weight:400; font-style:italic; font-display:swap;
+}
+@font-face{
+  font-family:"Poppins";
+  src:url("../fonts/Poppins-Medium.woff2") format("woff2");
+  font-weight:500; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Poppins";
+  src:url("../fonts/Poppins-SemiBold.woff2") format("woff2");
+  font-weight:600; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Poppins";
+  src:url("../fonts/Poppins-Bold.woff2") format("woff2");
+  font-weight:700; font-style:normal; font-display:swap;
+}
+
+/* ---------- VARIABLES GLOBALES ---------- */
+:root{
+  /* palette identité */
+  --c-orange:#fe7f02; --c-rouge:#e51e29; --c-vert:#8db625; --c-jaune:#fdc42f;
+  --c-rose:#e946a5;   --c-violet:#8645bf; --c-bleu:#01958a;
+  --c-marron:#542d1e; --c-creme:#fff8e8; --c-blanc:#ffffff;
+
+  --ink:#3a241a;                 /* texte courant */
+  --ink-soft:#6f5544;            /* texte secondaire */
+
+  --font-title:"Cherry Bomb One", system-ui, sans-serif;
+  --font-head:"Fredoka", system-ui, sans-serif;
+  --font-body:"Poppins", system-ui, sans-serif;
+
+  --wrap:1120px;
+  --radius:18px;
+  --radius-lg:26px;
+  --shadow:0 8px 24px rgba(84,45,30,.10);
+  --shadow-hover:0 14px 30px rgba(84,45,30,.18);
+
+  /* couleurs de famille par défaut (surchargées ci-dessous) */
+  --fam:#8db625;
+  --fam-accent:#5f7d13;
+  --fam-soft:rgba(141,182,37,.14);
+}
+
+/* ---------- COULEURS PAR FAMILLE ---------- */
+.famille-accompagnements{ --fam:#8db625; --fam-accent:#5f7d13; --fam-soft:rgba(141,182,37,.16); }
+.famille-snacks{          --fam:#8645bf; --fam-accent:#5f2f88; --fam-soft:rgba(134,69,191,.16); }
+.famille-boissons{        --fam:#fdc42f; --fam-accent:#c8940b; --fam-soft:rgba(253,196,47,.20); }
+.famille-plats-mijotes{   --fam:#fe7f02; --fam-accent:#c25e00; --fam-soft:rgba(254,127,2,.16); }
+.famille-poissons{        --fam:#01958a; --fam-accent:#016b63; --fam-soft:rgba(1,149,138,.16); }
+.famille-desserts{        --fam:#e946a5; --fam-accent:#b21f78; --fam-soft:rgba(233,70,165,.16); }
+.famille-viandes{         --fam:#e51e29; --fam-accent:#ab131c; --fam-soft:rgba(229,30,41,.16); }
+
+/* ---------- RESET LÉGER ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  color:var(--ink);
+  background:var(--c-creme);
+  line-height:1.6;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+button{font-family:inherit}
+
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:20px}
+
+:focus-visible{outline:3px solid var(--fam);outline-offset:2px;border-radius:6px}
+
+/* ---------- SYSTÈME D'ICÔNES (masque, recolorable) ---------- */
+.ic{
+  display:inline-block;
+  width:1.15em;height:1.15em;
+  vertical-align:-.2em;
+  background-color:currentColor;              /* prend la couleur du texte */
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-position:center;mask-position:center;
+  -webkit-mask-size:contain;mask-size:contain;
+  flex:none;
+}
+.ic--preparation{-webkit-mask-image:url(../icons/preparation.svg);mask-image:url(../icons/preparation.svg)}
+.ic--cuisson{-webkit-mask-image:url(../icons/cuisson.svg);mask-image:url(../icons/cuisson.svg)}
+.ic--fermentation{-webkit-mask-image:url(../icons/fermentation.svg);mask-image:url(../icons/fermentation.svg)}
+.ic--portions{-webkit-mask-image:url(../icons/portions.svg);mask-image:url(../icons/portions.svg)}
+.ic--origine{-webkit-mask-image:url(../icons/origine.svg);mask-image:url(../icons/origine.svg)}
+.ic--difficulte{-webkit-mask-image:url(../icons/difficulte.svg);mask-image:url(../icons/difficulte.svg)}
+.ic--ingredients{-webkit-mask-image:url(../icons/ingredients.svg);mask-image:url(../icons/ingredients.svg)}
+.ic--ustensiles{-webkit-mask-image:url(../icons/ustensiles.svg);mask-image:url(../icons/ustensiles.svg)}
+.ic--anecdote{-webkit-mask-image:url(../icons/anecdote.svg);mask-image:url(../icons/anecdote.svg)}
+.ic--partager{-webkit-mask-image:url(../icons/partager.svg);mask-image:url(../icons/partager.svg)}
+.ic--imprimer{-webkit-mask-image:url(../icons/imprimer.svg);mask-image:url(../icons/imprimer.svg)}
+.ic--lien-externe{-webkit-mask-image:url(../icons/lien-externe.svg);mask-image:url(../icons/lien-externe.svg);width:.9em;height:.9em}
+
+/* ---------- HEADER ---------- */
+.site-header{background:var(--c-creme);border-bottom:1px solid rgba(84,45,30,.10)}
+.site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.site-header__logo img{height:44px;width:auto}
+.site-nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.site-nav__link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--font-head);font-weight:600;text-decoration:none;
+  color:var(--c-marron);
+  padding:8px 14px;border-radius:999px;transition:background .2s,color .2s;
+}
+.site-nav__link:hover{background:var(--fam);color:#fff}
+
+/* ---------- HERO (pattern + image + titre) ---------- */
+.recipe-hero{
+  background-image:url(../patterns/pattern-accompagnements.svg);
+  background-size:cover;background-position:center;
+  border-bottom:4px solid var(--fam);
+}
+.recipe-hero__inner{
+  display:flex;align-items:center;gap:28px;flex-wrap:wrap;
+  padding-block:34px;min-height:220px;
+}
+.recipe-hero__media{flex:none}
+.recipe-hero__img{
+  width:200px;height:200px;border-radius:50%;object-fit:contain;
+  background:rgba(255,255,255,.55);padding:8px;
+  filter:drop-shadow(0 10px 18px rgba(84,45,30,.25));
+}
+.recipe-hero__title{margin:0}
+.recipe-hero__title span{
+  display:inline-block;
+  font-family:var(--font-title);font-weight:400;
+  font-size:clamp(2rem,7vw,3.4rem);line-height:1.05;
+  color:#fff;background:var(--fam-accent);
+  padding:.15em .5em;border-radius:16px;
+  box-shadow:var(--shadow);
+  text-transform:uppercase;letter-spacing:.5px;
+}
+
+/* ---------- CORPS ---------- */
+.recipe-body{padding-block:26px 48px}
+
+/* ---------- BANDEAU DURÉES ---------- */
+.stat-band{
+  list-style:none;margin:0 0 20px;padding:16px;
+  background:var(--c-blanc);border-radius:var(--radius-lg);
+  box-shadow:var(--shadow);
+  display:grid;grid-template-columns:repeat(4,1fr);gap:10px;
+}
+.stat{display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;padding:8px 6px;color:var(--c-marron)}
+.stat + .stat{border-left:1px solid rgba(84,45,30,.10)}
+.stat .ic{width:26px;height:26px;color:var(--fam-accent)}
+.stat__value{font-family:var(--font-head);font-weight:600;font-size:1.02rem;color:var(--ink)}
+.stat__label{font-size:.78rem;color:var(--ink-soft);line-height:1.25}
+
+/* ---------- LIGNE MÉTA ---------- */
+.meta-row{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  padding:12px 4px;border-block:1px solid rgba(84,45,30,.12);margin-bottom:22px;
+}
+.meta-row__info{display:flex;align-items:center;gap:10px 18px;flex-wrap:wrap}
+.meta-chip{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-head);font-weight:500;color:var(--c-marron)}
+.meta-chip .ic{color:var(--fam-accent)}
+.meta-row__actions{display:flex;gap:8px}
+.action-btn{
+  display:inline-flex;align-items:center;gap:7px;cursor:pointer;
+  font-family:var(--font-head);font-weight:600;color:var(--c-marron);
+  background:var(--c-blanc);border:1px solid rgba(84,45,30,.16);
+  padding:8px 14px;border-radius:999px;transition:background .2s,color .2s,box-shadow .2s;
+}
+.action-btn:hover{background:var(--fam);color:#fff;box-shadow:var(--shadow)}
+
+/* ---------- INTRO / ORIGINE ---------- */
+.recipe-intro{
+  font-style:italic;font-size:1.08rem;text-align:center;
+  max-width:760px;margin:0 auto 30px;color:var(--ink);
+}
+
+/* ---------- BLOCS (ingrédients, ustensiles, préparation) ---------- */
+.block{margin-bottom:30px}
+.block__title{
+  display:flex;align-items:center;gap:10px;
+  font-family:var(--font-head);font-weight:700;font-size:1.5rem;color:var(--c-marron);
+  margin:0 0 14px;padding-bottom:8px;border-bottom:3px solid var(--fam);
+}
+.block__title .ic{color:var(--fam-accent);width:1.2em;height:1.2em}
+
+/* ingrédients : pastilles NON cliquables, surbrillance famille au survol/focus */
+.ingredients{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.ingredient{
+  background:var(--c-blanc);border:1.5px solid rgba(84,45,30,.14);
+  border-radius:999px;padding:9px 16px;font-weight:500;color:var(--ink);
+  transition:background .18s,border-color .18s,color .18s,transform .18s;
+}
+.ingredient:hover,.ingredient:focus{
+  background:var(--fam);border-color:var(--fam-accent);color:#fff;
+  transform:translateY(-2px);outline:none;
+}
+
+.ustensiles{
+  background:var(--c-blanc);border-radius:var(--radius);
+  padding:16px 18px;box-shadow:var(--shadow);margin:0;
+}
+
+/* préparation : étapes numérotées "Étape N" */
+.steps{list-style:none;margin:0;padding:0;counter-reset:step;display:grid;gap:14px}
+.step{
+  background:var(--c-blanc);border-radius:var(--radius);
+  padding:16px 18px;box-shadow:var(--shadow);
+  border-left:6px solid var(--fam);
+}
+.step__num{
+  display:inline-block;font-family:var(--font-head);font-weight:700;
+  color:var(--fam-accent);text-transform:uppercase;letter-spacing:.5px;
+  font-size:.9rem;margin-bottom:4px;
+}
+.step p{margin:0}
+
+/* ---------- ANECDOTE ---------- */
+.anecdote{
+  background:var(--fam);color:#fff;border-radius:var(--radius-lg);
+  padding:22px 24px;margin:36px 0 30px;box-shadow:var(--shadow);
+}
+.anecdote__title{
+  display:flex;align-items:center;gap:10px;margin:0 0 8px;
+  font-family:var(--font-head);font-weight:700;font-size:1.35rem;color:#fff;
+}
+.anecdote__title .ic{color:#fff}
+.anecdote p{margin:0}
+
+/* boissons = jaune clair : texte foncé pour lisibilité */
+.famille-boissons .anecdote{color:var(--c-marron)}
+.famille-boissons .anecdote__title,
+.famille-boissons .anecdote__title .ic{color:var(--c-marron)}
+.famille-boissons .site-nav__link:hover,
+.famille-boissons .action-btn:hover,
+.famille-boissons .ingredient:hover,
+.famille-boissons .ingredient:focus{color:var(--c-marron)}
+
+/* ---------- VOIR AUSSI ---------- */
+.see-also{margin-top:8px}
+.see-also__title{
+  font-family:var(--font-head);font-weight:700;font-size:1.5rem;color:var(--c-marron);
+  margin:0 0 16px;
+}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;
+  background:var(--c-blanc);border-radius:var(--radius-lg);padding:18px 14px;
+  text-decoration:none;color:var(--ink);box-shadow:var(--shadow);
+  transition:transform .2s,box-shadow .2s;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+.card__img{width:120px;height:120px;border-radius:50%;object-fit:contain;background:var(--fam-soft);padding:6px}
+.card__name{font-family:var(--font-head);font-weight:600;font-size:1.02rem;color:var(--c-marron)}
+.card__time{font-size:.85rem;color:var(--ink-soft)}
+.card__cta{
+  margin-top:2px;font-family:var(--font-head);font-weight:600;font-size:.85rem;
+  color:#fff;background:var(--fam);padding:6px 14px;border-radius:999px;
+}
+.famille-boissons .card__cta{color:var(--c-marron)}
+
+/* ---------- RECETTE ALTERNATIVE (repliable) ---------- */
+.alt-recipe{margin-top:34px;border-top:1px solid rgba(84,45,30,.12);padding-top:14px}
+.alt-recipe__summary{
+  cursor:pointer;font-family:var(--font-head);font-weight:600;color:var(--ink-soft);
+  list-style:none;display:inline-flex;align-items:center;gap:8px;
+}
+.alt-recipe__summary::before{content:"+";font-size:1.1em;color:var(--fam-accent)}
+.alt-recipe[open] .alt-recipe__summary::before{content:"–"}
+.alt-recipe__summary::-webkit-details-marker{display:none}
+.alt-recipe__list{margin:12px 0 0;padding-left:18px;color:var(--ink-soft)}
+.alt-recipe__list li{margin-bottom:6px}
+.alt-recipe__list a{display:inline-flex;align-items:center;gap:6px;color:var(--fam-accent);text-decoration:none}
+.alt-recipe__list a:hover{text-decoration:underline}
+
+/* ---------- FOOTER ---------- */
+.site-footer{
+  background:var(--c-marron);color:#fff;text-align:center;
+  padding-block:18px;margin-top:20px;
+}
+.site-footer p{margin:0;font-size:.92rem}
+
+/* ---------- TOAST ---------- */
+.toast{
+  position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+  background:var(--c-marron);color:#fff;padding:12px 22px;border-radius:999px;
+  font-family:var(--font-head);font-weight:600;box-shadow:var(--shadow-hover);
+  opacity:0;transition:opacity .25s,transform .25s;z-index:50;
+}
+.toast.is-visible{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* =====================================================================
+   RESPONSIVE (mobile-first : on réduit le nombre de colonnes)
+   ===================================================================== */
+
+/* Cartes "Voir aussi" : carrousel swipe sur mobile avec peek + indice */
+@media (max-width:640px){
+  .cards{
+    display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;padding-bottom:10px;
+    scrollbar-width:none;
+  }
+  .cards::-webkit-scrollbar{display:none}
+  .card{
+    flex:0 0 78%;               /* laisse dépasser un bout de la carte suivante */
+    scroll-snap-align:center;
+  }
+  .see-also::after{
+    content:"Faites glisser pour voir plus →";
+    display:block;text-align:center;font-size:.82rem;color:var(--ink-soft);
+    margin-top:6px;
+  }
+}
+
+@media (max-width:560px){
+  .stat-band{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3){border-left:0}
+  .stat + .stat{border-left:1px solid rgba(84,45,30,.10)}
+  .stat:nth-child(odd){border-left:0}
+  .recipe-hero__inner{justify-content:center;text-align:center}
+  .meta-row{justify-content:center}
+}
+
+@media (min-width:641px) and (max-width:900px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ---------- réduction des animations ---------- */
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}
